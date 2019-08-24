@@ -6,16 +6,6 @@ public class Deadline extends Task {
         String unprocessed = super.toString();
         StringBuilder temp = new StringBuilder();
 
-        for (int i = 0; i < unprocessed.length(); i++) {
-            char c = unprocessed.charAt(i);
-            if (c == '/') {
-                temp.append("(by:");
-                i += 2;
-            } else {
-                temp.append(c);
-            }
-        }
-
         boolean isFirst = true;
         if (unprocessed.contains("/")) {
             for (int i = 0; i < unprocessed.length(); i++) {
